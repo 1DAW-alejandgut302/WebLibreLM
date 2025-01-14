@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Club de Campo Sevilla</title>
+    <style>
+        /* Estilos generales */
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Estilos para el cuerpo */
+        .cuerpo {
+            margin: 0;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            flex-grow: 1;
+        }
+
+        /* Estilos para las tarjetas */
+        .tarjeta {
+            background-color: crimson;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .tarjeta:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .tarjeta img {
+            width: 100%;
+            height: 400px;
+            transition: transform 0.3s;
+        }
+
+        .tarjeta img:hover {
+            transform: scale(1.05);
+        }
+
+        .tarjeta a {
+            padding: 15px;
+            color: skyblue;
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>Club de Campo</h2>
+        <div>
+            <a href="paginaPrincipal.html">Iniciar sesión</a>
+        </div>
+    </header>
+
+    <div class="cuerpo">
+        <div class="tarjeta">
+            <a href="maraton.html">Maratón</a>
+            <img src="imagenes/maratonportada.jpg" alt="Imagen de Maratón">
+        </div>
+        <div class="tarjeta">
+            <a href="eventos.html">Eventos</a>
+            <img src="imagenes/evento.jpeg" alt="Imagen de Maratón">
+        </div>
+        <div class="tarjeta">
+            <a href="ligaInvierno.html">Liga Invierno</a>
+            <img src="imagenes/campofurbo.jpeg" alt="Imagen de Maratón">
+        </div>
+        <div class="tarjeta">
+            <a href="instalaciones.html">Instalaciones</a>
+            <img src="imagenes/piscina.jpeg" alt="Imagen de Maratón">
+        </div>
+    </div>
+</body>
+</html>
