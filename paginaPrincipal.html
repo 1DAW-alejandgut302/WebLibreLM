@@ -5,7 +5,11 @@
         <link rel="stylesheet" href="estilo.css">
         <title>Web Principal del Club de Campo</title>
         <style>
-
+            /*De nuevo, aquí tenemos las propiedades CSS específicas de lo que sería la página principal.*/
+            body {
+                margin: 0;
+            }
+            /*Contenedor flotado a la izquierda que se contiene un listado de todas las páginas que quiero que sean accesibles desde la página principal.*/
             .pags {
                 width: 45%;
                 padding: 5px;
@@ -24,15 +28,15 @@
                 border-radius: 10px;
                 box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
                 font-size: 150%;
-                padding-bottom: 11%;
-                padding-top: 11%;
+                padding-bottom: 8.5%;
+                padding-top: 8.5%;
             }
             .pags > ul > li > a {
                 color: skyblue;
-                padding-bottom: 13%;
-                padding-top: 13%;
-                padding-left: 40%;
-                padding-right: 40%;
+                padding-bottom: 8.5%;
+                padding-top: 8.5%;
+                padding-left: 33%;
+                padding-right: 33%;
             }
 
             .pags > ul > li:hover {
@@ -40,6 +44,7 @@
                 color: black;
             }
 
+            /*Contenedor flotado también a la izquierda con una introducción a lo que sería el Club de Campo en caso de no saberlo con certeza.*/
             .textazo {
                 float: left;
                 width: 50%;
@@ -59,12 +64,14 @@
             <h2>Club de Campo</h2>
             <div><a href="index.html">Cerrar Sesión</a></div>
         </header>
+        <!--Este es el menú en la página principal que tanto nos pides.-->
         <div class="pags">
             <ul>
                 <li><a href="eventos.html">Eventos</a></li>
                 <li><a href="instalaciones.html">Instalaciones</a></li>
-                <li><a href="enObras.html">Historia</a></li>
+                <li><a href="mapaweb.html">Mapa Web</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="cosasnovistas.html">Cosas no vistas utilizadas</a></li>
             </ul>
         </div>
         <div class="textazo">

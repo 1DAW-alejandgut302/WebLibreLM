@@ -1,8 +1,8 @@
-/* Estilos generales */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    /*Por defecto, todo tiene margin 0 y padding 0. Esto es muy útil para maquetar más fácil.*/
     background-color: skyblue;
 }
 
@@ -39,21 +39,18 @@ header > h2 {
     padding-left: 1%;
 }
 
-h1 {
-    margin: 0;
-}
-
-/* Estilos para la sección de eventos */
-.eventos {
+/* Todo esto es para las secciones con tarjetas*/
+.seccion {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    /*Ya explicado en la página index.html*/
     gap: 20px;
     padding: 20px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.evento {
+.tarjeta {
     background-color: crimson;
     color: black;
     padding: 15px;
@@ -61,16 +58,16 @@ h1 {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.evento h2 {
+.tarjeta h2 {
     color: skyblue;
 }
 
-.evento a {
+.tarjeta a {
     text-decoration: underline;
     color: skyblue;
 }
 
-.evento p {
+.tarjeta p {
     margin: 10px 0;
 }
 
@@ -80,7 +77,6 @@ h1 {
     margin-bottom: 53px;
 }
 
-/* Estilos para el pie de página */
 footer {
     background-color: crimson   ;
     color: white;

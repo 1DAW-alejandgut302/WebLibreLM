@@ -6,31 +6,48 @@
     <link rel="stylesheet" href="estilo.css">
     <title>Club de Campo Sevilla</title>
     <style>
-        /* Estilos generales */
+        /* Estos estilos son específicos de esta página, mientras que la hoja de estilos tiene reglas más generales o 
+        que sé que se van a repetir, como es el caso del header. */
         body {
             margin: 0;
             font-family: 'Poppins', sans-serif;
             height: 100vh;
             display: flex;
-            flex-direction: column;
+            flex-direction: column; 
+            /* El flex-direction es una propiedad que establece como se van a disponer los objetos afectados por el display:flex. Por defecto, su valor es row, aunque
+            aquí le doy el valor column para que encajen más fácilmente los elementos de la página tal y como quiero que se vean. */
         }
 
-        /* Estilos para el cuerpo */
+        /* CSS del contenedor que contendrá las tarjetas.*/
         .cuerpo {
             margin: 0;
             padding: 20px;
             display: grid;
+            /* El display:grid convierte al contenedor seleccionado en un grid container, lo que significa que todo lo que haya dentro de él va a tener una
+            disposición en cuadrícula, es decir, vas a poder controlar todo lo que hay dentro por filas y columnas. */
             grid-template-columns: repeat(2, 1fr);
+            /* Esta propiedad:
+                grid-template-columns: indica que vamos a definir columnas para nuestro grid container.
+                repeat(2, ...): Es una forma de abreviar lo que de otro modo sería repetir una y otra vez lo mismo. Esto exactamente quiere decir que lo que 
+                se va a definir más adelante se tiene que repetir dos veces.
+                1fr: El espacio que van a ocupar las columnas definidas que es 1 fracción del espacio disponible.
+                RESULTADO: Vamos a definir una columna, que va a ocupar 1fr (la mitad del contenedor) y se va a repetir dos veces este proceso, osea, se crean 
+                dos columnas que ocupan la mitad del espacio total de contenedor en total.
+            */
             gap: 20px;
+            /*Define el espacio total que va a haber entre filas y columnas, que es un total de 20px.*/
             flex-grow: 1;
+            /*Indica que, si hay espacio libre, todos los elementos crecerán a la par. Si alguno de ellos en específico tuviera un valor mayor, crecería más
+            que el resto.*/
         }
 
-        /* Estilos para las tarjetas */
         .tarjeta {
             background-color: crimson;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             overflow: hidden;
+            /* overflow es una etiqueta que define cómo se va a gestionar el contenido desbordado de un contenedor. En este caso, se especifica que, en 
+            caso de desbordamiento, el contenido se corte sin más. */
             text-align: center;
             transition: transform 0.2s, box-shadow 0.2s;
             display: flex;
@@ -40,17 +57,21 @@
 
         .tarjeta:hover {
             transform: translateY(-5px);
+            /*Esta animación indica que, cuando el ratón pase por encima de la etiqueta, la disposición de la etiqueta se moverá 5px arriba en el lapso de tiempo
+            indicado anteriormente.*/
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
         }
 
         .tarjeta img {
             width: 100%;
-            height: 400px;
+            height: 350px;
             transition: transform 0.3s;
         }
 
         .tarjeta img:hover {
             transform: scale(1.05);
+            /*Acompañando a la transición anterior, esta nueva transformación hace que la imagen aumente su escala un poco, lo suficiente como para 
+            ocupar el espacio dejado anteriormente por la etiqueta, que va hacia arriba.*/
         }
 
         .tarjeta a {
@@ -62,29 +83,30 @@
     </style>
 </head>
 <body>
+    <!--Esta es la cabecera que tanto se repite en todas las páginas del sitio web, exceptuando las dos páginas de eventos específicos.-->
     <header>
         <h2>Club de Campo</h2>
         <div>
             <a href="paginaPrincipal.html">Iniciar sesión</a>
         </div>
     </header>
-
+    <!--Esta es la estructura de tarjetas que he confeccionado para esta portada.-->
     <div class="cuerpo">
         <div class="tarjeta">
             <a href="maraton.html">Maratón</a>
-            <img src="imagenes/maratonportada.jpg" alt="Imagen de Maratón">
+            <img src="imagenes/maratonportada.jpg">
         </div>
         <div class="tarjeta">
             <a href="eventos.html">Eventos</a>
-            <img src="imagenes/evento.jpeg" alt="Imagen de Maratón">
+            <img src="imagenes/evento.jpeg">
         </div>
         <div class="tarjeta">
             <a href="ligaInvierno.html">Liga Invierno</a>
-            <img src="imagenes/campofurbo.jpeg" alt="Imagen de Maratón">
+            <img src="imagenes/campofurbo.jpeg">
         </div>
         <div class="tarjeta">
             <a href="instalaciones.html">Instalaciones</a>
-            <img src="imagenes/piscina.jpeg" alt="Imagen de Maratón">
+            <img src="imagenes/piscina.jpeg">
         </div>
     </div>
 </body>

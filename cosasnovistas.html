@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Cosas no vistas - Club de Campo</title>
+    <!--
+    Todo lo que esta página mostrará:
+     - CSS grid de index.html y articulos.css
+     - El grid-template-columns de articulos.css
+     - El translateY de index.html
+     - overflow de index.html
+     - El &copy de todas las páginas que tienen footer.
+     - box-sizing del formulario.css
+     - El flex-grow de formulario.css
+    -->
+    <style>
+        /* CSS Grid y grid-template-columns.*/
+        .contenedor-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            background-color: lightgray;
+            padding: 20px;
+        }
+
+        .grid-hijo {
+            background-color: crimson;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* transform: translateY */
+        .efecto-hover-abajo {
+            background-color: crimson;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+
+        .efecto-hover-abajo:hover {
+            transform: translateY(10px);
+        }
+
+        .efecto-hover-arriba {
+            background-color: crimson;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+
+        .efecto-hover-arriba:hover {
+            transform: translateY(-10px); 
+        }
+
+        /* overflow */
+        .overflow {
+            width: 200px;
+            height: 100px;
+            overflow: scroll;
+            background-color: lightblue;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* box-sizing */
+        .box-sizing {
+            box-sizing: border-box; 
+            /* Tiene en cuenta todo lo del contenedor, borde y padding incluidos */
+            width: 100%;
+            padding: 20px;
+            border: 5px solid black;
+            background-color: lightgreen;
+        }
+
+        /* flex-grow */
+        .contenedor-flex {
+            display: flex;
+        }
+
+        .flex-grow-no-afectado {
+            background-color: coral;
+            padding: 20px;
+            margin: 5px;
+        }
+
+        .flex-grow-afectado {
+            flex-grow: 1;
+            background-color: coral;
+            padding: 20px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Demostración de Propiedades CSS</h1>
+
+    <a href="paginaPrincipal.html" style="color: crimson;">Página Principal</a>
+
+    <!-- Ejemplo de CSS Grid y grid-template-columns -->
+    <h2>Ejemplo de CSS Grid</h2>
+    <div class="contenedor-grid">
+        <div class="grid-hijo">Item 1</div>
+        <div class="grid-hijo">Item 2</div>
+        <div class="grid-hijo">Item 3</div>
+        <div class="grid-hijo">Item 4</div>
+    </div>
+
+    <!-- Ejemplo de translateY -->
+    <h2>Ejemplo de translateY</h2>
+    <div class="efecto-hover-arriba">Hover para mover hacia arriba</div>
+
+    <div class="efecto-hover-abajo">Hover para mover hacia abajo</div>
+
+    <!-- Ejemplo de overflow -->
+    <h2>Ejemplo de overflow</h2>
+    <div class="overflow">
+        Esto es un texto muy largo que no cabe en el contenedor y se puede desplazar con scroll. Sigue desplazándote para ver más contenido.
+    </div>
+
+    <!-- Ejemplo de box-sizing -->
+    <h2>Ejemplo de box-sizing</h2>
+    <div class="box-sizing">Este div utiliza box-sizing: border-box.</div>
+
+    <!-- Ejemplo de flex-grow -->
+    <h2>Ejemplo de flex-grow</h2>
+    <div class="contenedor-flex">
+        <div class="flex-grow-afectado">Grow 1</div>
+        <div class="flex-grow-no-afectado ">Grow 0</div>
+        <div class="flex-grow-afectado">Grow 1</div>
+    </div>
+
+    <!-- Ejemplo de &copy en footer -->
+    <footer>
+        <p>&copy; 2025 Club de Campo Sevilla. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>

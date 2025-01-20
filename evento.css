@@ -1,4 +1,3 @@
-/* Estilos generales */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -32,7 +31,6 @@ h1 {
     font-family: 'Times New Roman', Times, serif;
 }
 
-/* Estilos para la sección de evento */
 .evento {
     padding: 20px;
     width: 100%;
@@ -70,15 +68,16 @@ h2 {
     justify-content: center;
     gap: 15px;
     flex-wrap: wrap;
+    /* Esta propiedad define cómo se van a comportar los elementos de un contenedor flez cuando no caben en una sola línea. En este caso,
+    el valor wrap hace que se cambien de línea cuando no quepan. */
 }
 
 .contenedor-medios .medio {
-    max-width: 45%; /* Cada medio ocupará el 45% del contenedor */
+    max-width: 45%;
     height: auto;
     border-radius: 8px;
 }
 
-/* Estilos para el pie de página */
 footer {
     background-color: crimson;
     color: skyblue;
